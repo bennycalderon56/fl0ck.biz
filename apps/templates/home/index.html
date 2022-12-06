@@ -1,0 +1,455 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Dashboard {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="container-fluid py-4">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+
+            <div class="col-lg-4">
+              <div class="card h-100">
+                <div class="card-header pb-0 p-3">
+                  <div class="row">
+                    <div class="col-6 d-flex align-items-center">
+                      <h6 class="mb-0">Most Active of Today</h6>
+                    </div>
+                    <div class="col-6 text-end">
+                      <button type="button" class="btn bg-gradient-primary btn-tooltip btn-sm mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title="The top 30 most active stocks for the day." data-container="body" data-animation="true">?</button>                      
+
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body p-3 pb-0">
+                  
+                  <div class="table-wrapper">
+                    {%if not active%}
+                    </p align='center'>Top Movers Will Soon Update</p>
+                    {%else%}
+                    <table class="fixed_header">
+                        <tr class="text-center">
+                            <th class="text-center">Ticker</th>
+                            <th class="text-center">Change</th>
+        
+                        </tr>
+                        {%for k,v in active.items %}
+                        <t class="text-center"r>
+                            <td class="text-center"><b><a href="http://tradingview.com/symbols/{{k}}" target="_blank">{{k}}</a></b></td>
+                            <td>{{v}}</td>
+                        </tr>
+                        {%endfor%}
+                        {%endif%}
+        
+                    </table>
+        
+                </div>
+
+
+                  
+
+
+                </div>
+              </div>
+            </div>
+
+
+            <!--SECOND CARD BLOCK-->
+            <div class="col-lg-4">
+              <div class="card h-100">
+                <div class="card-header pb-0 p-3">
+                  <div class="row">
+                    
+                    <div class="col-6 d-flex align-items-center">
+                      <h6 class="mb-0">Top Winners of Today</h6>
+                    </div>
+
+                    <div class="col-6 text-end">
+                      <button type="button" class="btn bg-gradient-primary btn-tooltip btn-sm mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title="The top 30 best winning stocks for the day." data-container="body" data-animation="true">?</button>                      
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body p-3 pb-0">
+  
+                  <div class="table-wrapper">
+                    {%if not winners%}
+                    </p align='center'>Top Movers Will Soon Update</p>
+                    {%else%}
+                    <table class="fixed_header">
+                        <tr class="text-center">
+                            <th class="text-center">Ticker </th>
+                            <th class="text-center">Change</th>
+        
+                        </tr>
+                        {%for k,v in winners.items%}
+                        <tr class="text-center">
+                            <td class="text-center"><b><a href="http://tradingview.com/symbols/{{k}}"target="_blank">{{k}}</a></b></td>
+                            <td>+{{v}} % </td> 
+                            
+                        </tr>
+                        
+                        
+                        {%endfor%}
+                        
+                        {%endif%}
+        
+                    </table>
+        
+                </div>
+
+                </div>
+              </div>
+            </div>
+
+
+            <!--third card block -->
+
+            <div class="col-lg-4">
+              <div class="card h-100">
+                <div class="card-header pb-0 p-3">
+                  <div class="row">
+                    <div class="col-6 d-flex align-items-center">
+                      <h6 class="mb-0">Top Losers of Today</h6>
+                    </div>
+                    <div class="col-6 text-end">
+                      <button type="button" class="btn bg-gradient-primary btn-tooltip btn-sm mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title="The worst 30 losing stocks for the day." data-container="body" data-animation="true">?</button>                      
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body p-3 pb-0">
+                  
+                  <div class="table-wrapper">
+                    {%if not losers%}
+                    </p align='center'>Top Movers Will Soon Update</p>
+                    {%else%}
+                    <table class="fixed_header">
+                        <tr class="text-center">
+                            <th class="text-center">Ticker</th>
+                            <th class="text-center">Change</th>
+        
+                        </tr>
+                        {%for k,v in losers.items %}
+                        <tr class="text-center">
+                            <td class="text-center"><b><a href="http://tradingview.com/symbols/{{k}}"target="_blank">{{k}}</a></b></td>
+                            <td>{{v}} %</td>
+                        </tr>
+                        {%endfor%}
+                        {%endif%}
+        
+                    </table>
+        
+                </div>
+
+
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-lg-7 mb-lg-0 mb-4">
+          
+          <div class="card">
+            <div class="card-body p-3">
+              
+              <div class="row">
+                
+                 <div class="col-lg-5">
+                  <div class="d-flex flex-column h-100">
+                    <p class="mb-1 pt-2 text-bold">Welcome to</p>
+                    <h5 class="font-weight-bolder">Fl0ck.biz</h5>
+                    <p class="mb-4">Welcome to fl0ck.biz, your one-stop destination for all things market news and trading. 
+                      Stay up-to-date with the latest market movements and make informed decisions with our custom tools and extensive library of trading strategies and technical indicators. 
+                      Explore to deepen your knowledge of the markets, and learn about the greeks and other key concepts. With fl0ck.biz, you have the knowledge and tools you need to navigate the markets with confidence. 
+                    </p>
+                    {% comment %} <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
+                      cool arrow
+                      <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                    </a> {% endcomment %}
+                  </div>
+                </div> 
+                <div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
+                  <div class="bg-gradient-primary border-radius-lg h-100">
+                    <img src="{{ ASSETS_ROOT }}/img/shapes/waves-white.svg" class="position-absolute h-100 w-50 top-0 d-lg-block d-none" alt="waves">
+                    <div class="position-relative d-flex align-items-center justify-content-center h-100">
+                      <img class="w-100 position-relative z-index-2 pt-4" src="{{ ASSETS_ROOT }}/img/illustrations/rocket-white.png" alt="rocket">
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div> 
+
+
+        <div class="col-lg-5">
+          <div class="card h-100 p-3 ">
+
+            <div class="font-weight-bolder mb-4 pt-2">
+              <h5 class="mb-0">Stock News</h5>
+              </div>
+
+              <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3 table-wrapN">                  
+
+                {%if not newsfeed%}
+                  <h7> No Breaking News as of Now</h7>
+                {%else%}
+
+              <table class = "table align-items-center mb-0">
+                      {%for t,v,z in newsfeed%}
+                      <tr class="font-weight-bold mb-1 text-sm">
+                       <td class="font-weight-bolder mb-1 text-sm"><b> <a href="{{z}}" class="font-weight-bolder mb-1 text-sm" target="_blank"> {{t}} </td></b></a>                           
+                           {% comment %} <td>{{v}}</td>   {% endcomment %}
+                      </tr>
+
+                  {%endfor%}
+                  {%endif%}
+              </table>               
+
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+
+{% comment %} 
+            <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('{{ ASSETS_ROOT }}/img/ivancik.jpg');">
+
+
+
+      <div class="col-lg-5">
+        <div class="card p-3">
+          <div class="card-header pb-0">
+            <h3>Breaking Market News</h3>
+          </div>
+          <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+          <div class="d-flex flex-column">
+                <div class="card-body p-3">
+                  <div class="table-wrapper">
+                    
+                </div>
+                </div></div></li>
+        </div>
+      </div> {% endcomment %}
+
+
+
+
+      <div class="row my-4">
+        <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
+           <div class="card">
+            
+            <div class="chartMenu">
+              <div class="card-header pb-0">
+              <h3>Market Sector Performance</h3>
+              </div>
+            </div>
+
+            <div class="chart">
+              <div class="col-lg-12">
+                {% comment %} <button onclick="updateChart()">Fetch</button> {% endcomment %}
+                
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+            
+
+
+          </div> 
+        </div>
+    
+    
+        <!--BELOW IS JUST REFERENCES-->
+        {% comment %} 
+        <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+          <div class="d-flex flex-column">
+            <h6 class="text-dark mb-1 font-weight-bold text-sm">June, 25, 2019</h6>
+            <span class="text-xs">#QW-103578</span>
+          </div>
+          <div class="d-flex align-items-center text-sm">
+            $120
+            <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4"><i class="fas fa-file-pdf text-lg me-1"></i> PDF</button>
+          </div>
+        </li> 
+        {% endcomment %}
+
+
+
+
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 mb-4 table-whale">
+            
+             {% comment %} <div class="card-header pb-0">
+              <h6> Unusual Whale News </h6>
+            </div>  {% endcomment %}
+           
+            {% comment %} <div class="d-flex flex-column table-wrapper"> {% endcomment %}
+              <a class="twitter-timeline" href="https://twitter.com/unusual_whales?ref_src=twsrc%5Etfw">Tweets From @unusual_whales</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+            {% comment %} </div> {% endcomment %}
+
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+      
+
+      {% include "includes/footer.html" %}
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+  <script src="{{ ASSETS_ROOT }}/js/plugins/chartjs.min.js"></script>
+  <script>
+
+    
+    {% comment %} const DATA_COUNT = 5;
+    const NUMBER_CFG = {count: DATA_COUNT, min: 0, max: 100};data: Utils.numbers(NUMBER_CFG),           backgroundColor: Object.values(Utils.CHART_COLORS),{% endcomment %}
+
+   //fetch block
+   {% comment %} function updateChart() { 
+
+    async function fetchData() {
+      const url = 'https://financialmodelingprep.com/api/v3/sector-performance?apikey=2a4bf570d78de5dea1ca8e7e1e6244c0';
+      const resp = await fetch(url);
+      //wait until req has been completed
+      const datap = await resp.json();
+      //console.log(datap);
+      return datap;
+
+    };
+    
+    fetchData().then(datap => {
+    
+      const sector = datap.map(
+        function(index){
+          return index.sector;
+        })
+        console.log(sector);
+        myChart.config.data.labels = sector;
+
+        const change = datap.map(
+        function(index){
+          return index.changesPercentage;
+        })
+        console.log(change);
+        //Pchange = change.replace(/%/g,"");
+          myChart.data.datasets[0].data = change;
+          // pass the updated data to the update method
+          myChart.update(data);
+
+    });
+    } {% endcomment %}
+    //every 24 hrs it updates (DOES IT EVERY SECOND ??)
+    //setInterval(updateChart, 5000 * 1000);
+    
+
+    async function updateChart() { 
+      // fetch the data from the API
+      const url = 'https://financialmodelingprep.com/api/v3/sector-performance?apikey=2a4bf570d78de5dea1ca8e7e1e6244c0';
+      const resp = await fetch(url);
+      const datap = await resp.json();
+    
+      // update the chart with the data from the API
+      const sector = datap.map(function(index){
+        return index.sector;
+      })
+      myChart.config.data.labels = sector;
+    
+      const changeP = datap.map(function(index){
+        return index.changesPercentage;
+      })
+    
+      //console.log(changeP);
+      //myChart.data.datasets[0].data = changeP;
+      // remove the % symbols from the changeP array
+      const dataValues = changeP.map(value => value.replace('%', ''));
+
+      // update the data values for the chart
+      myChart.data.datasets[0].data = dataValues;
+
+      //console.log(dataValues);
+      myChart.update();
+    }
+    
+    
+
+
+
+    const data = {
+      labels: [' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+      datasets: [
+        {
+          label: '',
+          data:updateChart(),
+          backgroundColor: [
+          'rgb(0,255,159)',
+          'rgb(0,184,255)',
+          'rgb(0,30,255)',
+          'rgb(189,0,155)',
+          'rgb(214,0,255)',
+          'rgb(255,63,63)',
+          'rgb(255,240,0)',
+          'rgb(242,49,242)',
+          'rgb(101,101,191)',
+          'rgb(110,253,253)',
+          'rgb(205,41,240)',
+          'rgb(112,128,144)',
+          'rgb(25,41,41)',
+        ],
+
+
+        }
+      ]
+    };
+
+
+    const config = {
+      type: 'bar',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          legend:false,
+          tooltip: {
+            callbacks: {
+              label: (myChart) => (`${myChart.dataset.label}: ${myChart.raw}`),
+              data: (myChart) => (`${config.data.datasets[0].data}: ${myChart.index}`)
+            }
+          }
+        }
+      },
+    };
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    ); 
+
+    
+
+
+</script>
+
+
+{% endblock javascripts %}

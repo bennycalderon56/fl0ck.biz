@@ -1,0 +1,729 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Billing {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="container-fluid py-4">
+
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="row">
+          
+          <div class="col-lg-12 mb-xl-0 mb-4">
+            <div class="card bg-transparent shadow-xl">
+              <div class="overflow-hidden position-relative border-radius-xl" style="background-image: url('{{ ASSETS_ROOT }}/img/curved-images/curved14.jpg');">
+                <span class="mask bg-gradient-dark"></span>
+                <div class="card-body position-relative z-index-1 p-3">
+                  {% comment %} <i class="fas fa-wifi text-white p-2"></i> {% endcomment %}
+
+                  <div class="d-flex">
+                    <div class="d-flex">
+                      <div class="me-4">
+                        <p class="text-white text-sm opacity-8 mb-0">
+                          Want to make sure you choose only the winners?                    
+                          </p>
+                        <h4 class="text-white mb-0">An evergrowing catalog of essential trader knowledge</h4>
+
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          {% comment %} <div class="col-xl-6">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-header mx-4 p-3 text-center">
+                    <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
+                      <i class="fas fa-landmark opacity-10"></i>
+                    </div>
+                  </div>
+                  <div class="card-body pt-0 p-3 text-center">
+                    <h6 class="text-center mb-0">Salary</h6>
+                    <span class="text-xs">Belong Interactive</span>
+                    <hr class="horizontal dark my-3">
+                    <h5 class="mb-0">+$2000</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mt-md-0 mt-4">
+                <div class="card">
+                  <div class="card-header mx-4 p-3 text-center">
+                    <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
+                      <i class="fab fa-paypal opacity-10"></i>
+                    </div>
+                  </div>
+                  <div class="card-body pt-0 p-3 text-center">
+                    <h6 class="text-center mb-0">Paypal</h6>
+                    <span class="text-xs">Freelance Payment</span>
+                    <hr class="horizontal dark my-3">
+                    <h5 class="mb-0">$455.00</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> {% endcomment %}
+
+
+
+          <div class="col-md-12 mb-lg-0 mb-4">
+            <div class="card mt-6">
+              <div class="card-header pb-0 p-3">
+                <div class="row">
+                  <div class="col-6 d-flex align-items-center">
+                    <h4 class="mb-0">Let's start with the basics</h4>
+                  </div>
+                  &nbsp;
+
+                  <h5 class="mb-0">Terminology: </h6>
+
+                  {% comment %} <div class="col-6 text-end">
+                    button was here
+                  </div> {% endcomment %}
+                </div>
+              </div>
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="table-responsive p-0 table-wrapper">
+                    <table class="table align-items-center justify-content-center mb-0">
+                      
+                      <tbody>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Annual Report: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0">Annual reports inform us about companies cash flow and management strategy.</p>
+                          </td>                          
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Averaging Down: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0">A straetegy of continuing to buy more shares of a company as the stock price is falling.</p>
+                          </td>                          
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Bearish Market: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0">When the market is trending downwards -</p>
+                          </td>                          
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Behavioral Investing: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0">The belief that human psychology drives the market.</p>
+                          </td>                          
+                        </tr>
+
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Bullish Market: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0">When the market is trending upwards +</p>
+                          </td>                          
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Cash Flow: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0">The amount of cash and cash equivalents moving through a company's business. </p>
+                          </td>                          
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Dividend: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0">A portion of a company's earnings paid to shareholders quarterly or annually. 
+                              (Note. Note all companys pay dividends.) </p>
+                          </td>                          
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">ETF (Exchange-Traded Fund): </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0">An ETF is a corporation that makes investments on behalf of its owners. i.e. S&P 500, ARK </p>
+                          </td>                          
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">IPO (Initial Public Offering): </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0"> An IPO is the first offering or sale of a stock by a company to the public.</p>
+                          </td>                          
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">FAANG Stocks: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0"> Facebook(FB) , Amazon(AMZN), Apple(AAPL), Netflix(NFLX), and Google(GOOG).</p>
+                          </td>                          
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Hedging: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0"> A risk management strategy to offset your losses.</p>
+                          </td>                          
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Hedge Funds: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0"> A privately-held company that makes investments on behalf of its owners.</p>
+                          </td>                          
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Long Position: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0"> An investment strategy to hold your stocks long term. (+ years) </p>
+                          </td>                          
+                        </tr>
+
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Margin: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0"> Money a trader <b>borrows</b> to buy stocks. </p>
+                          </td>                          
+                        </tr>
+
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Mutual Fund: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0"> Similar to an ETF however a Mutual Fund is a corporation with far more structure.</p>
+                          </td>                          
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Options: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0"> An agreement to buy or sell 100 shares of a stock at a specific price.</p>
+                          </td>                          
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Penny Stocks: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0"> The equity of a small company that trades for less than $5 per share.</p>
+                          </td>                          
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Price-Earning Ratio: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0"> A formula for perfoming a company valuation. </p>
+                          </td>                          
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Portfolio: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0"> A collection of assests that makes up a traders/investors portfolio.</p>
+                          </td>                          
+                        </tr>
+
+                  
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Rally: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0"> A rapid increase in the general price level of the market or stock.</p>
+                          </td>                          
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Sharpe: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0"> Commonly used risk measuring strategy.</p>
+                          </td>                          
+                        </tr>
+                        
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Short Selling: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0"> The opposite of going long, short term selling.</p>
+                          </td>                          
+                        </tr>
+
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Spread: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0"> The difference between a stock's bid and ask price. </p>
+                          </td>                          
+                        </tr>
+                        
+
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Volatility: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0"> The price movements of a stock or the entire stock market. High volatility = high market movement.</p>
+                          </td>                          
+                        </tr>
+
+
+  
+                          <td>
+                            <div class="d-flex px-2">                              
+                              <div class="my-auto">
+                                <h6 class="mb-0 text-sm">Yield: </h6>
+                              </div>                              
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm font-weight-bold mb-0"> The return of an investment.</p>
+                          </td>                          
+                        </tr>
+
+
+                      </tbody>
+                    </table>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card h-100">
+          <div class="card-header pb-0 p-3">
+            <div class="row">
+              <div class="col-6 d-flex align-items-center">
+                <h6 class="mb-0">The Greeks? </h6>
+              </div>
+              {% comment %} <div class="col-6 text-end">
+                <button class="btn btn-outline-primary btn-sm mb-0">View All</button>
+              </div> {% endcomment %}
+            </div>
+          </div>
+          <div class="card-body p-3 pb-0">
+            <ul class="list-group">
+              <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                <div class="d-flex flex-column">
+                  <h6 class="mb-1 text-dark font-weight-bold text-sm">Delta</h6>
+                  <span class="text-xs">Measures the change in option price when stock prices move.
+                  </span>
+                </div>
+                <div class="d-flex align-items-center text-sm">
+                  
+                  <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4">&Delta;</button>
+                </div>
+              </li>
+              <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                <div class="d-flex flex-column">
+                  <h6 class="text-dark mb-1 font-weight-bold text-sm">Gamma</h6>
+                  <span class="text-xs">Measures change in the Delta when stock prices moves.
+
+                  </span>
+                </div>
+                <div class="d-flex align-items-center text-sm">
+                  
+                  <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4">&Gamma;</button>
+                </div>
+              </li>
+              <li class="list-group-item border-0 d-flex justify-content-between ps-0 border-radius-lg">
+                <div class="d-flex flex-column">
+                  <h6 class="text-dark mb-1 font-weight-bold text-sm">Rho</h6>
+                  <span class="text-xs">Measures change in option price relative to interest rates.</span>
+                </div>
+                <div class="d-flex align-items-center text-sm">
+                  
+                  <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4">&Rho;</button>
+                </div>
+              </li>
+              <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                <div class="d-flex flex-column">
+                  <h6 class="text-dark mb-1 font-weight-bold text-sm">Theta</h6>
+                  <span class="text-xs">Measures the decay in option prices everyday as the expiration gets nearer.</span>
+                </div>
+                <div class="d-flex align-items-center text-sm">
+                  
+                  <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4">&Theta;</button>
+                </div>
+              </li>
+             
+              <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                <div class="d-flex flex-column">
+                  <h6 class="text-dark mb-1 font-weight-bold text-sm">Vega/Volatility</h6>
+                  <span class="text-xs">Measures the change in option price when volatility moves. </span>
+                </div>
+                <div class="d-flex align-items-center text-sm">
+
+                  <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4">V</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+<!--Bottom portion-->
+
+
+    <div class="row">
+      <div class="col-md-7 mt-4">
+        <div class="card">
+          <div class="card-header pb-0 px-3">
+            <h2 class="mb-0">Useful Technical Indicators</h2>
+          </div>
+          <div class="card-body pt-4 p-3">
+            <ul class="list-group">
+              <li class="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
+                <div class="d-flex flex-column">
+                  <header class="major">
+                    <h4>Simple Moving Averages</h4>
+                  </header>
+                  <a href="https://i.imgur.com/KsI1KNL.png" class="image" target="_blank">
+										<img src="https://i.imgur.com/KsI1KNL.png" class="img-fluid border-radius-lg" alt = " " />
+									</a>
+									<div class="content">
+										<div class="inner">
+											
+											<p>The Simple Moving Average (SMA) is the average of a selected range of prices(usually closing price) by the number of periods in that range, in this case 200 days.<br><br>A good entry using SMA would be the 2nd highlighted red circle, before it breaks above it.</p>
+											<p>SMA = (A<sub>1</sub> + A<sub>2</sub> + A<sub>3</sub> +...+ A<sub>n</sub>)/n <br>A<sub>n</sub> = price of stock at period n<br> n = total number of periods</p>
+										</div>
+									</div>
+                </div>
+              </li>
+
+
+              <li class="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-100 border-radius-lg">
+                <div class="d-flex flex-column">
+                  <header class="major">
+                    <h4>Exponential Moving Averages</h4>
+                  </header>
+                  <a href="https://i.imgur.com/SvNPP5H.png" class="image" target="_blank">
+										<img src="https://i.imgur.com/SvNPP5H.png" class="img-fluid border-radius-lg" alt = " " />
+									</a>
+									<div class="content">
+										<div class="inner">
+											
+											<p>The Exponential Moving Average (EMA) is the moving average with greater weight it uses more relevant data than SMA.<br><br>A good entry using EMA would be the both highlighted circles. In this case the 4 EMA crossed up the 50 EMA resulting in a pop up.</p>
+											<p>EMA = Closing Price * (n) + EMA(Previous Day) * (1-n)<br>n = total number of periods</p>
+
+										</div>
+									</div>
+                </div>
+              </li>
+
+
+              <li class="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-100 border-radius-lg">
+                <div class="d-flex flex-column">
+                  <header class="major">
+                    <h4>Traingular Moving Averages</h4>
+                  </header>
+                  <a href="https://i.imgur.com/NhFLBNy.png" class="image" target="_blank">
+										<img src="https://i.imgur.com/NhFLBNy.png" class="img-fluid border-radius-lg" alt = " " />
+									</a>
+									<div class="content">
+										<div class="inner">
+											
+											<p>The Triangular Moving Average (TMA) is an average of an average, of the selected prices <br>It acts as a very clear bullish or bearish indicator, if the current price is above then it has bullish movement, while if the current price is below then it is bearish until it crosses above its TMA. </p>
+											<p>Since its an average of an average we: <br>SMA = (P<sub>1</sub> + P<sub>2</sub> + P<sub>3</sub> + ... + P<sub>n</sub>) / n<br> TMA = (SMA<sub>1</sub>+ SMA<sub>2</sub>+ SMA<sub>3</sub>+ ... + SMA<sub>n</sub>) / n<br> P = Closing Price of Stock <br>n = total number of periods</p>
+										</div>
+									</div>
+                </div>
+              </li>
+
+              <li class="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-100 border-radius-lg">
+                <div class="d-flex flex-column">
+                  <header class="major">
+                    <h4>Volume</h4>
+                  </header>
+                  <a href="https://i.imgur.com/JxdYL9h.png" class="image" target="_blank">
+										<img src="https://i.imgur.com/JxdYL9h.png" class="img-fluid border-radius-lg" alt = " " />
+									</a>
+									<div class="content">
+										<div class="inner">
+											
+											<p>Volume is the number of shares of a security traded during the given period of time.<br>Volume is a major key since it is used to measure the relative significance of a market move.<br>The more volume there is the higher the stock can move.<br>The lower volume there is the less a stock can move.</p>
+											
+										</div>
+									</div>
+
+                </div>
+              </li>
+
+              <li class="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-100 border-radius-lg">
+                <div class="d-flex flex-column">
+                  <header class="major">
+                    <h4>Volume Weighted Average Price</h4>
+                  </header>
+                  <a href="https://i.imgur.com/fs6IAPs.png" class="image" target="_blank">
+										<img src="https://i.imgur.com/fs6IAPs.png" class="img-fluid border-radius-lg" alt = " " />
+									</a>
+									<div class="content">
+										<div class="inner">
+											
+											<p>The Volume Weighted Average Price (VWAP) helps in giving the average price a stock has traded throughout the day using both volume and price.</p>
+											<p>1 way of using the VWAP is to try and buy below the VWAP then sell above the VWAP</p>
+											
+										</div>
+									</div>
+
+                </div>
+              </li>
+
+
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5 mt-4">
+        <div class="card h-100 mb-4">
+          
+          <div class="card-header pb-0 px-3">
+            <div class="row">
+              <div class="col-md-6">
+                <h4 class="mb-0">S&Ps 500 ETF</h4>
+              </div>
+              {% comment %} <div class="col-md-6 d-flex justify-content-end align-items-center">
+               
+              
+              </div>  {% endcomment %}
+            </div>
+            
+          </div>
+
+          <div class="table-etf">
+            <div id="table-container"> </div></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+    {% include "includes/footer.html" %}
+
+  </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %} 
+<script>
+// Set the API URL and API key
+const api_url = 'https://financialmodelingprep.com/api/v3/etf-holder/SPY?apikey=2a4bf570d78de5dea1ca8e7e1e6244c0';
+
+// Send a GET request to the API
+fetch(api_url)
+  .then(response => response.json()) // Convert the response to JSON
+  .then(data => {
+    // Get an array of the keys we want to grab data for
+    const keys = Object.keys(data[0]).filter(key => key === 'asset' || key === 'sharesNumber' || key === 'weightPercentage' || key === 'marketValue' || key === 'updated');
+
+    // Create an HTML table
+    const table = document.createElement('table');
+
+    // Create a table row for the table headings
+    const tr = document.createElement('tr');
+
+  // Create table headings for each key in the keys array
+  for (const key of keys) {
+    const th = document.createElement('th');
+    if (key === 'sharesNumber') {
+      th.innerHTML = 'Shares Number';
+    } else if (key === 'weightPercentage') {
+      th.innerHTML = 'Weight Percentage';
+    } else if (key === 'marketValue') {
+      th.innerHTML = 'Market Value';
+    } else {
+      th.innerHTML = key;
+    }
+    tr.appendChild(th);
+  }
+
+    // Add the table headings to the table
+    table.appendChild(tr);
+
+    // Create a table row for each item in the data
+    for (const item of data) {
+      const tr = document.createElement('tr');
+
+      // Create a table cell for each key in the keys array
+      for (const key of keys) {
+        const td = document.createElement('td');
+        td.innerHTML = item[key];
+        tr.appendChild(td);
+      }
+
+      // Add the table row to the table
+      table.appendChild(tr);
+    }
+
+    // Add the table to the page
+    document.getElementById('table-container').appendChild(table);
+  });
+</script>
+{% endblock javascripts %}
